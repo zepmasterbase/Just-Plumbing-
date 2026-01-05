@@ -3,27 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Just Plumbing | Modern Plumbing Services</title>
-<meta name="description" content="Just Plumbing - Reliable plumbing services in Randfontein. Leak repairs, blocked drains, geysers and emergency plumbing.">
+<title>Just Plumbing | Reliable Plumbing Services</title>
+<meta name="description" content="Just Plumbing - Sky blue themed modern plumbing website. Leak repairs, blocked drains, geysers, and emergency plumbing services in Randfontein.">
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --primary: #1e88e5;
-  --accent: #00f0ff;
-  --dark: #0d0d0d;
+  --primary: #00c2ff;  /* Sky blue main */
+  --accent: #ff6f61;   /* Coral accent */
+  --dark: #004d6b;     /* Dark blue for contrast */
   --light: #ffffff;
-  --card-shadow: rgba(30,136,229,0.25);
-  --bg-gradient: linear-gradient(135deg, #0d0d0d, #121212);
+  --bg: #e0f7ff;       /* Light sky background */
+  --card-shadow: rgba(0,194,255,0.25);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
 
 body {
-  background: var(--bg-gradient);
-  color: var(--light);
+  background: var(--bg);
+  color: #333;
   overflow-x: hidden;
 }
 
@@ -33,36 +33,36 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(0,0,0,0.6);
+  background: rgba(255,255,255,0.2);
   backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .logo {
   font-size: 1.6rem;
   font-weight: 700;
   color: var(--primary);
-  text-shadow: 0 0 10px var(--primary);
 }
 
 .nav-links a {
   margin-left: 1rem;
   text-decoration: none;
-  color: var(--light);
+  color: var(--dark);
   font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: 12px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.3);
   transition: 0.3s;
 }
 
 .nav-links a:hover {
-  background: var(--primary);
-  color: var(--dark);
+  background: var(--accent);
+  color: var(--light);
   transform: translateY(-2px);
-  box-shadow: 0 0 15px var(--primary);
+  box-shadow: 0 0 10px var(--accent);
 }
 
 /* ===== HERO ===== */
@@ -73,106 +73,39 @@ header {
   justify-content: center;
   text-align: center;
   height: 80vh;
-  background: radial-gradient(circle at top, #0a0a0a, #111);
-  position: relative;
-  overflow: hidden;
   padding: 2rem 1rem;
+  position: relative;
 }
 
 .glow-box {
   max-width: 800px;
   padding: 3rem 2rem;
-  background: rgba(255,255,255,0.05);
+  background: var(--light);
   border-radius: 20px;
-  box-shadow: 0 0 0 rgba(30,136,229,0.7);
+  box-shadow: 0 0 0 rgba(0,194,255,0.7);
   animation: pulse 3s infinite;
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(30,136,229,0.55); }
-  70% { box-shadow: 0 0 0 25px rgba(30,136,229,0); }
-  100% { box-shadow: 0 0 0 0 rgba(30,136,229,0); }
+  0% { box-shadow: 0 0 0 0 rgba(0,194,255,0.55); }
+  70% { box-shadow: 0 0 0 25px rgba(0,194,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,194,255,0); }
 }
 
 .hero h1 {
   font-size: 2.8rem;
-  color: var(--accent);
+  color: var(--primary);
   margin-bottom: 1rem;
-  text-shadow: 0 0 15px var(--accent);
 }
 
 .hero p {
-  max-width: 650px;
   font-size: 1.1rem;
-  color: #aaa;
+  color: #555;
+  max-width: 650px;
 }
-
-/* ===== 3D Plumbing Tools ===== */
-.tools-section {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 3rem 1.5rem;
-  perspective: 1000px;
-}
-
-.tool-card {
-  background: #111;
-  width: 180px;
-  height: 180px;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,240,255,0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  font-size: 2.5rem;
-  transition: transform 0.5s, box-shadow 0.5s;
-  cursor: pointer;
-}
-
-.tool-card:hover {
-  transform: rotateY(15deg) rotateX(5deg) translateZ(10px);
-  box-shadow: 0 20px 50px rgba(0,240,255,0.45);
-}
-
-/* ===== MINI SERVICE PLACEHOLDERS ===== */
-.services-section {
-  padding: 3.5rem 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.6rem;
-}
-
-.service-placeholder {
-  background: #111;
-  padding: 1.8rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(30,136,229,0.2);
-  position: relative;
-  overflow: hidden;
-}
-
-.service-placeholder::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, transparent, rgba(30,136,229,0.08), transparent);
-  animation: shimmer 4s infinite;
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-.service-placeholder h3 { color: var(--primary); margin-bottom: 0.5rem; }
-.service-placeholder p { color: #ccc; }
 
 /* ===== CTA BUTTONS ===== */
 .cta-buttons {
-  text-align: center;
   margin-top: 2rem;
 }
 
@@ -182,25 +115,50 @@ header {
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
-  color: var(--dark);
-  background: var(--primary);
-  box-shadow: 0 0 20px var(--primary);
+  color: var(--light);
+  background: var(--accent);
+  box-shadow: 0 0 20px var(--accent);
   transition: transform 0.2s, box-shadow 0.3s;
 }
 
 .cta-buttons a:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 35px var(--primary);
+  box-shadow: 0 0 35px var(--accent);
 }
+
+/* ===== SERVICES SECTION ===== */
+.services-section {
+  padding: 4rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.6rem;
+}
+
+.service-card {
+  background: var(--light);
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 12px 30px var(--card-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px var(--card-shadow);
+}
+
+.service-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
+.service-card p { color: #555; }
 
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
   padding: 1.5rem;
-  color: #888;
-  background: #050505;
+  color: #555;
+  background: rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(0,0,0,0.05);
   font-size: 0.9rem;
-  border-top: 1px solid rgba(0,240,255,0.2);
 }
 
 /* RESPONSIVE */
@@ -208,7 +166,6 @@ footer {
   .hero h1 { font-size: 2.2rem; }
   .hero p { font-size: 1rem; }
   header { flex-direction: column; gap: 0.5rem; }
-  .tools-section { gap: 1rem; }
 }
 </style>
 </head>
@@ -224,8 +181,8 @@ footer {
 
 <section class="hero">
   <div class="glow-box">
-    <h1>Reliable Plumbing Services</h1>
-    <p>Trusted local plumbers serving Randfontein. Fast, clean, and professional repairs for leaks, blocked drains, geysers, and emergency plumbing.</p>
+    <h1>Sky-Blue Plumbing Services</h1>
+    <p>Professional plumbing in Randfontein with a clean, modern approach. Leak repairs, blocked drains, geysers, and emergency plumbing at your service.</p>
   </div>
   <div class="cta-buttons">
     <a href="tel:+27XXXXXXXXX">📞 Call Now</a>
@@ -233,29 +190,22 @@ footer {
   </div>
 </section>
 
-<section class="tools-section">
-  <div class="tool-card">🔧</div>
-  <div class="tool-card">🪛</div>
-  <div class="tool-card">🧰</div>
-  <div class="tool-card">🚿</div>
-</section>
-
 <section class="services-section">
-  <div class="service-placeholder">
+  <div class="service-card">
     <h3>Leak Repairs</h3>
-    <p>Quick fixes for leaking taps, pipes, and toilets.</p>
+    <p>Quick and efficient repair of leaking taps, pipes, and toilets.</p>
   </div>
-  <div class="service-placeholder">
+  <div class="service-card">
     <h3>Blocked Drains</h3>
-    <p>Clearing sinks, showers, and sewer blockages.</p>
+    <p>Unblocking sinks, showers, and sewer lines safely.</p>
   </div>
-  <div class="service-placeholder">
+  <div class="service-card">
     <h3>Geyser Repairs</h3>
-    <p>Installation and repair of geysers for reliable hot water.</p>
+    <p>Installation and maintenance of geysers for reliable hot water.</p>
   </div>
-  <div class="service-placeholder">
+  <div class="service-card">
     <h3>Emergency Plumbing</h3>
-    <p>Fast response when plumbing issues can’t wait.</p>
+    <p>Fast response for plumbing emergencies anytime.</p>
   </div>
 </section>
 
