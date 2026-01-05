@@ -3,34 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Just Plumbing | Plumbing Solutions</title>
-<meta name="description" content="Just Plumbing - Professional plumbing services in Randfontein. Leak repairs, blocked drains, geysers, and emergency plumbing.">
+<title>Just Plumbing | Modern Plumbing Solutions</title>
+<meta name="description" content="Just Plumbing - Professional plumbing services in Randfontein with modern design, animated gradient background, and floating neon icons.">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --primary: #00bfff; /* Blue main */
-  --secondary: #00ffea; /* Neon cyan accent */
-  --dark: #0a0a0a;
+  --primary: #00bfff; /* Neon blue */
+  --secondary: #00ffea; /* Neon cyan */
+  --accent: #ffea00; /* subtle yellow accent */
+  --dark: #0c0c0c;
   --light: #ffffff;
-  --bg: #0f0f0f;
-  --card-shadow: rgba(0,191,255,0.3);
 }
 
 /* ===== GLOBAL ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
-}
+* { box-sizing: border-box; margin:0; padding:0; font-family: 'Inter', sans-serif; }
 
 body {
-  background: var(--bg);
+  background: linear-gradient(-45deg, #0c0c0c, #0c0f2c, #001f3f, #0c0c0c);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
   color: var(--light);
   overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
 
 /* ===== HEADER ===== */
@@ -42,27 +44,31 @@ header {
   background: rgba(0,0,0,0.6);
   backdrop-filter: blur(8px);
   position: sticky;
-  top: 0;
-  z-index: 1000;
+  top:0;
+  z-index:1000;
   border-bottom: 1px solid rgba(0,191,255,0.2);
 }
 
 .logo {
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight:700;
   color: var(--primary);
   text-shadow: 0 0 12px var(--primary), 0 0 24px var(--secondary);
 }
 
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
 .nav-links a {
-  margin-left: 1rem;
   text-decoration: none;
   color: var(--light);
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
+  font-weight:600;
+  padding:0.5rem 1rem;
+  border-radius:12px;
   background: rgba(255,255,255,0.05);
-  transition: 0.3s;
+  transition:0.3s;
 }
 
 .nav-links a:hover {
@@ -73,120 +79,132 @@ header {
 
 /* ===== HERO ===== */
 .hero {
-  display: flex;
+  display:flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-height: 80vh;
-  padding: 4rem 1rem;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  min-height:80vh;
+  padding:4rem 1rem;
+  position:relative;
+  overflow:hidden;
 }
 
 .glow-header {
-  max-width: 700px;
-  padding: 3rem 2rem;
+  max-width:700px;
+  padding:3rem 2rem;
   background: rgba(0,0,0,0.3);
-  border-radius: 20px;
+  border-radius:20px;
   box-shadow: 0 0 20px var(--primary);
-  text-align: center;
+  text-align:center;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size:2.8rem;
   color: var(--primary);
-  text-shadow: 0 0 15px var(--primary), 0 0 30px var(--secondary);
-  margin-bottom: 1rem;
+  text-shadow: 0 0 15px var(--primary),0 0 30px var(--secondary);
+  margin-bottom:1rem;
 }
 
 .hero p {
-  font-size: 1.15rem;
-  color: #aaa;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+  font-size:1.15rem;
+  color:#aaa;
+  line-height:1.6;
+  margin-bottom:2rem;
 }
 
-/* ===== CTA BUTTONS ===== */
+/* ===== CTA BUTTONS (same row) ===== */
 .cta-buttons {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
 .cta-buttons a {
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  font-weight: 600;
-  text-decoration: none;
+  padding:1rem 2rem;
+  border-radius:12px;
+  font-weight:600;
+  text-decoration:none;
   color: var(--dark);
   background: var(--secondary);
-  box-shadow: 0 0 20px var(--secondary), 0 0 40px var(--primary);
+  box-shadow: 0 0 20px var(--secondary),0 0 40px var(--primary);
   transition: transform 0.2s, box-shadow 0.3s;
 }
 
 .cta-buttons a:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 35px var(--secondary), 0 0 70px var(--primary);
+  box-shadow: 0 0 35px var(--secondary),0 0 70px var(--primary);
 }
 
-/* ===== 3D TOOL ICON ===== */
+/* ===== 3D TOOL ICONS FLOATING ===== */
 .tool-section {
-  display: flex;
-  justify-content: center;
+  position: relative;
   padding: 3rem 1rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .tool-icon {
-  font-size: 6rem;
-  color: var(--secondary);
-  text-shadow: 0 0 10px var(--secondary), 0 0 25px var(--primary), 0 0 50px var(--primary);
-  transition: transform 0.5s;
+  font-size:5rem;
+  color: var(--primary);
+  text-shadow:0 0 10px var(--primary),0 0 25px var(--secondary),0 0 50px var(--secondary);
+  position:absolute;
+  animation: float 6s ease-in-out infinite;
 }
 
-.tool-icon:hover {
-  transform: rotateY(20deg) rotateX(10deg) scale(1.1);
+.tool-icon:nth-child(1){ top:10%; left:10%; animation-delay:0s;}
+.tool-icon:nth-child(2){ top:30%; right:15%; animation-delay:2s;}
+.tool-icon:nth-child(3){ bottom:15%; left:20%; animation-delay:4s;}
+.tool-icon:nth-child(4){ bottom:20%; right:25%; animation-delay:6s;}
+
+@keyframes float {
+  0%{ transform: translateY(0px) rotate(0deg);}
+  50%{ transform: translateY(-15px) rotate(10deg);}
+  100%{ transform: translateY(0px) rotate(0deg);}
 }
 
 /* ===== SERVICES ===== */
 .services-section {
-  padding: 4rem 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  padding:4rem 2rem;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap:2rem;
 }
 
 .service-card {
   background: rgba(0,0,0,0.3);
-  border-radius: 16px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  box-shadow: 0 10px 25px var(--card-shadow);
+  border-radius:16px;
+  padding:2rem 1.5rem;
+  text-align:center;
+  box-shadow: 0 10px 25px rgba(0,191,255,0.25);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 50px var(--card-shadow);
+  box-shadow: 0 20px 50px rgba(0,191,255,0.5);
 }
 
-.service-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
-.service-card p { color: #ccc; }
+.service-card h3{color:var(--primary); margin-bottom:0.5rem;}
+.service-card p{color:#ccc;}
 
 /* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  color: #aaa;
+footer{
+  text-align:center;
+  padding:2rem 1rem;
+  color:#aaa;
   background: rgba(0,0,0,0.3);
-  border-top: 1px solid rgba(0,191,255,0.2);
-  font-size: 0.9rem;
+  border-top:1px solid rgba(0,191,255,0.2);
+  font-size:0.9rem;
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 2.2rem; }
-  .hero p { font-size: 1rem; }
-  .cta-buttons { flex-direction: column; }
+@media(max-width:768px){
+  .hero h1{ font-size:2.2rem; }
+  .hero p{ font-size:1rem; }
+  .cta-buttons{ flex-direction:column; }
 }
 </style>
 </head>
@@ -203,7 +221,7 @@ footer {
 <section class="hero">
   <div class="glow-header">
     <h1>Plumbing Solutions</h1>
-    <p>Professional plumbing services in Randfontein. We provide leak repairs, blocked drains, geyser installations, and emergency plumbing. Clean, reliable, and efficient service guaranteed.</p>
+    <p>Professional plumbing services in Randfontein. Leak repairs, blocked drains, geysers, and emergency plumbing—all done cleanly and efficiently.</p>
   </div>
   <div class="cta-buttons">
     <a href="tel:+27XXXXXXXXX">📞 Call Now</a>
@@ -213,6 +231,9 @@ footer {
 
 <section class="tool-section">
   <div class="tool-icon">🔧</div>
+  <div class="tool-icon">🛠️</div>
+  <div class="tool-icon">🚿</div>
+  <div class="tool-icon">🪠</div>
 </section>
 
 <section class="services-section">
