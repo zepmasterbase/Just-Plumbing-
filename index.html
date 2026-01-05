@@ -3,27 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Just Plumbing | Reliable Plumbing Services</title>
-<meta name="description" content="Just Plumbing - Sky blue themed modern plumbing website. Leak repairs, blocked drains, geysers, and emergency plumbing services in Randfontein.">
+<title>Just Plumbing | Neon 3D Plumbing Services</title>
+<meta name="description" content="Just Plumbing - Modern neon-inspired plumbing website with glowing pulsing header, 3D plumbing tool, and futuristic service placeholders.">
 
-<!-- Google Font -->
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --primary: #00c2ff;  /* Sky blue main */
-  --accent: #ff6f61;   /* Coral accent */
-  --dark: #004d6b;     /* Dark blue for contrast */
+  --primary: #ff00ff; /* Neon pink */
+  --secondary: #00ffea; /* Neon cyan */
+  --dark: #0c0c0c; /* Dark background */
   --light: #ffffff;
-  --bg: #e0f7ff;       /* Light sky background */
-  --card-shadow: rgba(0,194,255,0.25);
+  --bg: #0c0c0c; /* Dark theme background */
+  --card-shadow: rgba(255,0,255,0.3);
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
 
 body {
   background: var(--bg);
-  color: #333;
+  color: var(--light);
   overflow-x: hidden;
 }
 
@@ -33,36 +39,37 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.6);
   backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(255,0,255,0.2);
 }
 
 .logo {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 700;
   color: var(--primary);
+  text-shadow: 0 0 12px var(--primary), 0 0 24px var(--secondary);
 }
 
 .nav-links a {
   margin-left: 1rem;
   text-decoration: none;
-  color: var(--dark);
+  color: var(--light);
   font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: 12px;
-  background: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.05);
   transition: 0.3s;
 }
 
 .nav-links a:hover {
-  background: var(--accent);
-  color: var(--light);
+  background: var(--secondary);
+  color: var(--dark);
   transform: translateY(-2px);
-  box-shadow: 0 0 10px var(--accent);
+  box-shadow: 0 0 12px var(--secondary), 0 0 24px var(--primary);
 }
 
 /* ===== HERO ===== */
@@ -72,92 +79,115 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 80vh;
+  height: 85vh;
   padding: 2rem 1rem;
   position: relative;
 }
 
-.glow-box {
-  max-width: 800px;
+.glow-header {
+  max-width: 850px;
   padding: 3rem 2rem;
-  background: var(--light);
+  background: rgba(0,0,0,0.3);
   border-radius: 20px;
-  box-shadow: 0 0 0 rgba(0,194,255,0.7);
-  animation: pulse 3s infinite;
+  box-shadow: 0 0 0 rgba(255,0,255,0.8);
+  animation: pulse-header 3s infinite;
 }
 
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(0,194,255,0.55); }
-  70% { box-shadow: 0 0 0 25px rgba(0,194,255,0); }
-  100% { box-shadow: 0 0 0 0 rgba(0,194,255,0); }
+@keyframes pulse-header {
+  0% { box-shadow: 0 0 0 0 rgba(255,0,255,0.7); }
+  50% { box-shadow: 0 0 30px 10px rgba(255,0,255,0.6); }
+  100% { box-shadow: 0 0 0 0 rgba(255,0,255,0.7); }
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: var(--primary);
+  text-shadow: 0 0 15px var(--primary), 0 0 30px var(--secondary);
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 650px;
+  max-width: 700px;
+  font-size: 1.15rem;
+  color: #aaa;
+  margin-bottom: 2rem;
 }
 
-/* ===== CTA BUTTONS ===== */
-.cta-buttons {
-  margin-top: 2rem;
-}
-
+/* CTA BUTTONS */
 .cta-buttons a {
   margin: 0.5rem;
   padding: 1rem 2rem;
   border-radius: 12px;
-  text-decoration: none;
   font-weight: 600;
-  color: var(--light);
-  background: var(--accent);
-  box-shadow: 0 0 20px var(--accent);
+  text-decoration: none;
+  color: var(--dark);
+  background: var(--secondary);
+  box-shadow: 0 0 20px var(--secondary), 0 0 40px var(--primary);
   transition: transform 0.2s, box-shadow 0.3s;
 }
 
 .cta-buttons a:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 35px var(--accent);
+  box-shadow: 0 0 35px var(--secondary), 0 0 70px var(--primary);
 }
 
-/* ===== SERVICES SECTION ===== */
+/* ===== 3D NEON TOOL ICON ===== */
+.tool-section {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+  perspective: 1000px;
+}
+
+.tool-icon {
+  font-size: 6rem;
+  color: var(--secondary);
+  text-shadow: 0 0 10px var(--secondary), 0 0 25px var(--primary), 0 0 50px var(--primary);
+  transition: transform 0.5s;
+}
+
+.tool-icon:hover {
+  transform: rotateY(20deg) rotateX(10deg) scale(1.1);
+}
+
+/* ===== SERVICES PLACEHOLDERS ===== */
 .services-section {
   padding: 4rem 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.6rem;
 }
 
 .service-card {
-  background: var(--light);
+  background: rgba(0,0,0,0.3);
   border-radius: 16px;
   padding: 1.8rem;
-  box-shadow: 0 12px 30px var(--card-shadow);
-  transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
+  box-shadow: 0 10px 25px rgba(255,0,255,0.25);
+  animation: pulse-card 3s infinite;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+@keyframes pulse-card {
+  0%, 100% { box-shadow: 0 10px 25px rgba(255,0,255,0.25); }
+  50% { box-shadow: 0 15px 40px rgba(255,0,255,0.5); }
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 35px var(--card-shadow);
+  box-shadow: 0 20px 50px rgba(255,0,255,0.6);
 }
 
 .service-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
-.service-card p { color: #555; }
+.service-card p { color: #ccc; }
 
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
   padding: 1.5rem;
-  color: #555;
-  background: rgba(255,255,255,0.2);
-  border-top: 1px solid rgba(0,0,0,0.05);
+  color: #aaa;
+  background: rgba(0,0,0,0.3);
+  border-top: 1px solid rgba(255,0,255,0.2);
   font-size: 0.9rem;
 }
 
@@ -165,7 +195,6 @@ footer {
 @media (max-width: 768px) {
   .hero h1 { font-size: 2.2rem; }
   .hero p { font-size: 1rem; }
-  header { flex-direction: column; gap: 0.5rem; }
 }
 </style>
 </head>
@@ -180,9 +209,9 @@ footer {
 </header>
 
 <section class="hero">
-  <div class="glow-box">
-    <h1>Sky-Blue Plumbing Services</h1>
-    <p>Professional plumbing in Randfontein with a clean, modern approach. Leak repairs, blocked drains, geysers, and emergency plumbing at your service.</p>
+  <div class="glow-header">
+    <h1>Neon Plumbing Solutions</h1>
+    <p>Futuristic neon-style plumbing services in Randfontein. Leak repairs, blocked drains, geysers, and emergency plumbing—all glowing with quality.</p>
   </div>
   <div class="cta-buttons">
     <a href="tel:+27XXXXXXXXX">📞 Call Now</a>
@@ -190,22 +219,26 @@ footer {
   </div>
 </section>
 
+<section class="tool-section">
+  <div class="tool-icon">🔧</div>
+</section>
+
 <section class="services-section">
   <div class="service-card">
     <h3>Leak Repairs</h3>
-    <p>Quick and efficient repair of leaking taps, pipes, and toilets.</p>
+    <p>Quick and efficient repairs of leaking taps, pipes, and toilets.</p>
   </div>
   <div class="service-card">
     <h3>Blocked Drains</h3>
-    <p>Unblocking sinks, showers, and sewer lines safely.</p>
+    <p>Clearing sinks, showers, and sewer lines safely and quickly.</p>
   </div>
   <div class="service-card">
     <h3>Geyser Repairs</h3>
-    <p>Installation and maintenance of geysers for reliable hot water.</p>
+    <p>Installation and repair of geysers for reliable hot water.</p>
   </div>
   <div class="service-card">
     <h3>Emergency Plumbing</h3>
-    <p>Fast response for plumbing emergencies anytime.</p>
+    <p>Fast response for urgent plumbing problems anytime.</p>
   </div>
 </section>
 
