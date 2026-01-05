@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Just Plumbing & Repair Services | Randfontein</title>
-  <meta name="description" content="Just Plumbing & Repair Services in Randfontein. Reliable local plumbers for leaks, blocked drains, geysers and emergency plumbing." />
+  <meta name="description" content="Reliable plumbing & repair services in Randfontein. Leak repairs, blocked drains, geysers and emergency plumbing." />
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -12,10 +12,9 @@
   <style>
     :root {
       --primary: #1e88e5;
-      --secondary: #e3f2fd;
       --dark: #0d47a1;
       --light: #ffffff;
-      --gray: #f5f7fa;
+      --gray: #f4f7fb;
     }
 
     * {
@@ -28,143 +27,152 @@
     body {
       background: var(--gray);
       color: #333;
-      line-height: 1.6;
     }
 
+    /* ===== HEADER ===== */
     header {
       background: linear-gradient(135deg, var(--primary), var(--dark));
-      color: var(--light);
-      padding: 1.5rem;
+      padding: 1.2rem 1.5rem;
     }
 
-    .nav {
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1200px;
-      margin: auto;
     }
 
-    .nav h1 {
-      font-size: 1.4rem;
+    .logo {
+      font-size: 1.5rem;
       font-weight: 700;
-    }
-
-    .nav a {
       color: white;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .nav-links a {
       text-decoration: none;
+      color: white;
       font-weight: 600;
-      background: rgba(255,255,255,0.15);
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(6px);
+      transition: background 0.3s, transform 0.2s;
     }
 
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.35);
+      transform: translateY(-1px);
+    }
+
+    /* ===== HERO / GLOW PLACEHOLDER ===== */
     .hero {
+      padding: 4.5rem 1.5rem 5.5rem;
       text-align: center;
-      padding: 4rem 1.5rem;
-      background: var(--secondary);
+      background: #eef5ff;
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
+    .glow-box {
+      max-width: 820px;
+      margin: auto;
+      padding: 3rem 2rem;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 0 0 rgba(30,136,229,0.7);
+      animation: pulse 3.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(30,136,229,0.55);
+      }
+      70% {
+        box-shadow: 0 0 0 25px rgba(30,136,229,0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(30,136,229,0);
+      }
+    }
+
+    .hero h1 {
+      font-size: 2.3rem;
       color: var(--dark);
+      margin-bottom: 1rem;
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 620px;
       margin: auto;
-      margin-bottom: 2rem;
+      font-size: 1.05rem;
+      color: #555;
     }
 
-    .cta-buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.9rem 1.6rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .call {
-      background: var(--primary);
-      color: white;
-    }
-
-    .whatsapp {
-      background: #25D366;
-      color: white;
-    }
-
+    /* ===== MINI SERVICE PLACEHOLDERS ===== */
     section {
       max-width: 1200px;
       margin: auto;
-      padding: 3rem 1.5rem;
+      padding: 3.5rem 1.5rem;
     }
 
-    .services {
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.6rem;
     }
 
-    .card {
+    .service-placeholder {
       background: white;
       padding: 1.8rem;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      position: relative;
+      overflow: hidden;
     }
 
-    .card h3 {
-      margin-bottom: 0.5rem;
+    .service-placeholder::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(30,136,229,0.08),
+        transparent
+      );
+      animation: shimmer 4s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .service-placeholder h3 {
       color: var(--primary);
-    }
-
-    .about {
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    }
-
-    .contact {
-      background: var(--dark);
-      color: white;
-      border-radius: 12px;
-      padding: 2rem;
-    }
-
-    .contact p {
       margin-bottom: 0.6rem;
+      position: relative;
     }
 
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      border-radius: 10px;
-      margin-top: 1rem;
+    .service-placeholder p {
+      color: #555;
+      position: relative;
     }
 
+    /* ===== FOOTER ===== */
     footer {
-      text-align: center;
-      padding: 1.5rem;
       background: #0b3c91;
       color: white;
+      text-align: center;
+      padding: 1.5rem;
       font-size: 0.9rem;
-    }
-
-    .floating-whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 14px 16px;
-      border-radius: 50%;
-      text-decoration: none;
-      font-size: 22px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
     }
   </style>
 </head>
@@ -172,90 +180,53 @@
 <body>
 
 <header>
-  <div class="nav">
-    <h1>Just Plumbing</h1>
-    <a href="tel:+27XXXXXXXXX">Call Now</a>
+  <div class="header-inner">
+    <div class="logo">Just Plumbing</div>
+
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
 </header>
 
 <section class="hero">
-  <h2>Reliable Plumbing & Repair Services in Randfontein</h2>
-  <p>
-    Your trusted local plumber in West Porges. We handle leaks, blocked drains,
-    geysers, repairs, and emergency plumbing with fast response and honest pricing.
-  </p>
-  <div class="cta-buttons">
-    <a class="call" href="tel:+27XXXXXXXXX">📞 Call Now</a>
-    <a class="whatsapp" href="https://wa.me/27XXXXXXXXX">💬 WhatsApp Us</a>
-  </div>
-</section>
-
-<section>
-  <h2 style="margin-bottom:1.5rem;">Our Plumbing Services</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Leak Repairs</h3>
-      <p>Fast detection and repair of leaking pipes, taps, and toilets.</p>
-    </div>
-    <div class="card">
-      <h3>Blocked Drains</h3>
-      <p>Clearing blocked sinks, toilets, and sewer lines efficiently.</p>
-    </div>
-    <div class="card">
-      <h3>Geyser Repairs</h3>
-      <p>Installation, repair, and maintenance of geysers.</p>
-    </div>
-    <div class="card">
-      <h3>Emergency Plumbing</h3>
-      <p>Available for urgent plumbing problems when you need us most.</p>
-    </div>
-    <div class="card">
-      <h3>Bathroom & Kitchen Plumbing</h3>
-      <p>New installations and repairs for homes and small businesses.</p>
-    </div>
-    <div class="card">
-      <h3>General Maintenance</h3>
-      <p>Affordable plumbing maintenance to prevent future problems.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="about">
-    <h2>Why Choose Just Plumbing?</h2>
+  <div class="glow-box">
+    <h1>Reliable Plumbing & Repair Services</h1>
     <p>
-      We are a locally based plumbing business proudly serving Randfontein and
-      surrounding areas. Our focus is on quality workmanship, reliability, and
-      friendly service you can trust.
+      Trusted local plumbers serving Randfontein and surrounding areas.
+      Clean work, fast response, honest pricing.
     </p>
-    <ul style="margin-top:1rem; padding-left:1.2rem;">
-      <li>✔ Local & reliable</li>
-      <li>✔ Honest pricing</li>
-      <li>✔ Fast response times</li>
-      <li>✔ Quality workmanship</li>
-    </ul>
   </div>
 </section>
 
 <section>
-  <div class="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Address:</strong> 85 Main Reef Rd, West Porges, Randfontein, 1759</p>
-    <p><strong>Phone:</strong> +27 XXXXXXXX</p>
-    <p><strong>WhatsApp:</strong> +27 XXXXXXXX</p>
-    <p><strong>Service Area:</strong> Randfontein & surrounding areas</p>
+  <div class="services-grid">
+    <div class="service-placeholder">
+      <h3>Leak Repairs</h3>
+      <p>Quick fixes for leaking taps, pipes, and toilets.</p>
+    </div>
 
-    <iframe 
-      src="https://www.google.com/maps?q=85%20Main%20Reef%20Rd,%20West%20Porges,%20Randfontein,%201759&output=embed">
-    </iframe>
+    <div class="service-placeholder">
+      <h3>Blocked Drains</h3>
+      <p>Clearing sinks, showers, and sewer blockages.</p>
+    </div>
+
+    <div class="service-placeholder">
+      <h3>Geyser Repairs</h3>
+      <p>Installation, repairs, and hot water solutions.</p>
+    </div>
+
+    <div class="service-placeholder">
+      <h3>Emergency Plumbing</h3>
+      <p>Fast response when plumbing problems can’t wait.</p>
+    </div>
   </div>
 </section>
 
 <footer>
   © 2026 Just Plumbing & Repair Services | Randfontein
 </footer>
-
-<a class="floating-whatsapp" href="https://wa.me/27XXXXXXXXX">💬</a>
 
 </body>
 </html>
