@@ -90,6 +90,32 @@ header {
   overflow:hidden;
 }
 
+/* Floating icons above hero text */
+.hero-icons {
+  display:flex;
+  justify-content:center;
+  gap:2rem;
+  margin-bottom:2rem;
+}
+
+.tool-icon {
+  font-size:3.5rem;
+  color: var(--primary);
+  text-shadow:0 0 10px var(--primary),0 0 25px var(--secondary),0 0 50px var(--secondary);
+  animation: float 4s ease-in-out infinite;
+}
+
+.tool-icon:nth-child(1){ animation-delay:0s;}
+.tool-icon:nth-child(2){ animation-delay:1s;}
+.tool-icon:nth-child(3){ animation-delay:2s;}
+.tool-icon:nth-child(4){ animation-delay:3s;}
+
+@keyframes float {
+  0%{ transform: translateY(0px);}
+  50%{ transform: translateY(-10px);}
+  100%{ transform: translateY(0px);}
+}
+
 .glow-header {
   max-width:700px;
   padding:3rem 2rem;
@@ -97,6 +123,7 @@ header {
   border-radius:20px;
   box-shadow: 0 0 20px var(--primary);
   text-align:center;
+  margin-bottom:2rem; /* space between header and buttons */
 }
 
 .hero h1 {
@@ -119,6 +146,7 @@ header {
   gap:1rem;
   flex-wrap:wrap;
   justify-content:center;
+  margin-top:1rem; /* Move down from glow-header */
 }
 
 .cta-buttons a {
@@ -135,34 +163,6 @@ header {
 .cta-buttons a:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 35px var(--secondary),0 0 70px var(--primary);
-}
-
-/* ===== 3D TOOL ICONS FLOATING ===== */
-.tool-section {
-  position: relative;
-  padding: 3rem 1rem;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.tool-icon {
-  font-size:5rem;
-  color: var(--primary);
-  text-shadow:0 0 10px var(--primary),0 0 25px var(--secondary),0 0 50px var(--secondary);
-  position:absolute;
-  animation: float 6s ease-in-out infinite;
-}
-
-.tool-icon:nth-child(1){ top:10%; left:10%; animation-delay:0s;}
-.tool-icon:nth-child(2){ top:30%; right:15%; animation-delay:2s;}
-.tool-icon:nth-child(3){ bottom:15%; left:20%; animation-delay:4s;}
-.tool-icon:nth-child(4){ bottom:20%; right:25%; animation-delay:6s;}
-
-@keyframes float {
-  0%{ transform: translateY(0px) rotate(0deg);}
-  50%{ transform: translateY(-15px) rotate(10deg);}
-  100%{ transform: translateY(0px) rotate(0deg);}
 }
 
 /* ===== SERVICES ===== */
@@ -219,21 +219,24 @@ footer{
 </header>
 
 <section class="hero">
+
+  <!-- Floating plumbing icons above hero -->
+  <div class="hero-icons">
+    <div class="tool-icon">🔧</div>
+    <div class="tool-icon">🛠️</div>
+    <div class="tool-icon">🚿</div>
+    <div class="tool-icon">🪠</div>
+  </div>
+
   <div class="glow-header">
     <h1>Plumbing Solutions</h1>
     <p>Professional plumbing services in Randfontein. Leak repairs, blocked drains, geysers, and emergency plumbing—all done cleanly and efficiently.</p>
   </div>
+
   <div class="cta-buttons">
     <a href="tel:+27XXXXXXXXX">📞 Call Now</a>
     <a href="https://wa.me/27XXXXXXXXX">💬 WhatsApp</a>
   </div>
-</section>
-
-<section class="tool-section">
-  <div class="tool-icon">🔧</div>
-  <div class="tool-icon">🛠️</div>
-  <div class="tool-icon">🚿</div>
-  <div class="tool-icon">🪠</div>
 </section>
 
 <section class="services-section">
