@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Just Plumbing | Neon 3D Plumbing Services</title>
-<meta name="description" content="Just Plumbing - Modern neon-inspired plumbing website with glowing pulsing header, 3D plumbing tool, and futuristic service placeholders.">
+<title>Just Plumbing | Plumbing Solutions</title>
+<meta name="description" content="Just Plumbing - Modern plumbing website with glowing pulsing header, 3D plumbing tool, and futuristic service placeholders.">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --primary: #ff00ff; /* Neon pink */
-  --secondary: #00ffea; /* Neon cyan */
+  --primary: #00bfff; /* Neon blue */
+  --secondary: #00ffea; /* Neon cyan accent */
   --dark: #0c0c0c; /* Dark background */
   --light: #ffffff;
-  --bg: #0c0c0c; /* Dark theme background */
-  --card-shadow: rgba(255,0,255,0.3);
+  --bg: #0c0c0c;
+  --card-shadow: rgba(0,191,255,0.3);
 }
 
 /* ===== GLOBAL ===== */
@@ -44,7 +44,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255,0,255,0.2);
+  border-bottom: 1px solid rgba(0,191,255,0.2);
 }
 
 .logo {
@@ -89,14 +89,14 @@ header {
   padding: 3rem 2rem;
   background: rgba(0,0,0,0.3);
   border-radius: 20px;
-  box-shadow: 0 0 0 rgba(255,0,255,0.8);
+  box-shadow: 0 0 0 rgba(0,191,255,0.8);
   animation: pulse-header 3s infinite;
 }
 
 @keyframes pulse-header {
-  0% { box-shadow: 0 0 0 0 rgba(255,0,255,0.7); }
-  50% { box-shadow: 0 0 30px 10px rgba(255,0,255,0.6); }
-  100% { box-shadow: 0 0 0 0 rgba(255,0,255,0.7); }
+  0% { box-shadow: 0 0 0 0 rgba(0,191,255,0.7); }
+  50% { box-shadow: 0 0 30px 10px rgba(0,191,255,0.6); }
+  100% { box-shadow: 0 0 0 0 rgba(0,191,255,0.7); }
 }
 
 .hero h1 {
@@ -131,7 +131,7 @@ header {
   box-shadow: 0 0 35px var(--secondary), 0 0 70px var(--primary);
 }
 
-/* ===== 3D NEON TOOL ICON ===== */
+/* ===== 3D TOOL ICON ===== */
 .tool-section {
   display: flex;
   justify-content: center;
@@ -163,19 +163,19 @@ header {
   border-radius: 16px;
   padding: 1.8rem;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(255,0,255,0.25);
+  box-shadow: 0 10px 25px rgba(0,191,255,0.25);
   animation: pulse-card 3s infinite;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 @keyframes pulse-card {
-  0%, 100% { box-shadow: 0 10px 25px rgba(255,0,255,0.25); }
-  50% { box-shadow: 0 15px 40px rgba(255,0,255,0.5); }
+  0%, 100% { box-shadow: 0 10px 25px rgba(0,191,255,0.25); }
+  50% { box-shadow: 0 15px 40px rgba(0,191,255,0.5); }
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(255,0,255,0.6);
+  box-shadow: 0 20px 50px rgba(0,191,255,0.6);
 }
 
 .service-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
@@ -187,7 +187,7 @@ footer {
   padding: 1.5rem;
   color: #aaa;
   background: rgba(0,0,0,0.3);
-  border-top: 1px solid rgba(255,0,255,0.2);
+  border-top: 1px solid rgba(0,191,255,0.2);
   font-size: 0.9rem;
 }
 
@@ -210,8 +210,8 @@ footer {
 
 <section class="hero">
   <div class="glow-header">
-    <h1>Neon Plumbing Solutions</h1>
-    <p>Futuristic neon-style plumbing services in Randfontein. Leak repairs, blocked drains, geysers, and emergency plumbing—all glowing with quality.</p>
+    <h1>Plumbing Solutions</h1>
+    <p>Modern plumbing services in Randfontein. Leak repairs, blocked drains, geysers, and emergency plumbing—all done professionally.</p>
   </div>
   <div class="cta-buttons">
     <a href="tel:+27XXXXXXXXX">📞 Call Now</a>
