@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Just Plumbing | Plumbing Solutions</title>
-<meta name="description" content="Just Plumbing - Modern plumbing website with glowing pulsing header, 3D plumbing tool, and futuristic service placeholders.">
+<meta name="description" content="Just Plumbing - Professional plumbing services in Randfontein. Leak repairs, blocked drains, geysers, and emergency plumbing.">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --primary: #00bfff; /* Neon blue */
+  --primary: #00bfff; /* Blue main */
   --secondary: #00ffea; /* Neon cyan accent */
-  --dark: #0c0c0c; /* Dark background */
+  --dark: #0a0a0a;
   --light: #ffffff;
-  --bg: #0c0c0c;
+  --bg: #0f0f0f;
   --card-shadow: rgba(0,191,255,0.3);
 }
 
@@ -48,7 +48,7 @@ header {
 }
 
 .logo {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--primary);
   text-shadow: 0 0 12px var(--primary), 0 0 24px var(--secondary);
@@ -68,7 +68,6 @@ header {
 .nav-links a:hover {
   background: var(--secondary);
   color: var(--dark);
-  transform: translateY(-2px);
   box-shadow: 0 0 12px var(--secondary), 0 0 24px var(--primary);
 }
 
@@ -79,43 +78,42 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 85vh;
-  padding: 2rem 1rem;
-  position: relative;
+  min-height: 80vh;
+  padding: 4rem 1rem;
 }
 
 .glow-header {
-  max-width: 850px;
+  max-width: 700px;
   padding: 3rem 2rem;
   background: rgba(0,0,0,0.3);
   border-radius: 20px;
-  box-shadow: 0 0 0 rgba(0,191,255,0.8);
-  animation: pulse-header 3s infinite;
-}
-
-@keyframes pulse-header {
-  0% { box-shadow: 0 0 0 0 rgba(0,191,255,0.7); }
-  50% { box-shadow: 0 0 30px 10px rgba(0,191,255,0.6); }
-  100% { box-shadow: 0 0 0 0 rgba(0,191,255,0.7); }
+  box-shadow: 0 0 20px var(--primary);
+  text-align: center;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: var(--primary);
   text-shadow: 0 0 15px var(--primary), 0 0 30px var(--secondary);
   margin-bottom: 1rem;
 }
 
 .hero p {
-  max-width: 700px;
   font-size: 1.15rem;
   color: #aaa;
+  line-height: 1.6;
   margin-bottom: 2rem;
 }
 
-/* CTA BUTTONS */
+/* ===== CTA BUTTONS ===== */
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .cta-buttons a {
-  margin: 0.5rem;
   padding: 1rem 2rem;
   border-radius: 12px;
   font-weight: 600;
@@ -136,7 +134,6 @@ header {
   display: flex;
   justify-content: center;
   padding: 3rem 1rem;
-  perspective: 1000px;
 }
 
 .tool-icon {
@@ -150,32 +147,26 @@ header {
   transform: rotateY(20deg) rotateX(10deg) scale(1.1);
 }
 
-/* ===== SERVICES PLACEHOLDERS ===== */
+/* ===== SERVICES ===== */
 .services-section {
-  padding: 4rem 1.5rem;
+  padding: 4rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
 .service-card {
   background: rgba(0,0,0,0.3);
   border-radius: 16px;
-  padding: 1.8rem;
+  padding: 2rem 1.5rem;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,191,255,0.25);
-  animation: pulse-card 3s infinite;
+  box-shadow: 0 10px 25px var(--card-shadow);
   transition: transform 0.3s, box-shadow 0.3s;
-}
-
-@keyframes pulse-card {
-  0%, 100% { box-shadow: 0 10px 25px rgba(0,191,255,0.25); }
-  50% { box-shadow: 0 15px 40px rgba(0,191,255,0.5); }
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,191,255,0.6);
+  box-shadow: 0 20px 50px var(--card-shadow);
 }
 
 .service-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
@@ -184,17 +175,18 @@ header {
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem 1rem;
   color: #aaa;
   background: rgba(0,0,0,0.3);
   border-top: 1px solid rgba(0,191,255,0.2);
   font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .hero h1 { font-size: 2.2rem; }
   .hero p { font-size: 1rem; }
+  .cta-buttons { flex-direction: column; }
 }
 </style>
 </head>
@@ -211,7 +203,7 @@ footer {
 <section class="hero">
   <div class="glow-header">
     <h1>Plumbing Solutions</h1>
-    <p>Modern plumbing services in Randfontein. Leak repairs, blocked drains, geysers, and emergency plumbing—all done professionally.</p>
+    <p>Professional plumbing services in Randfontein. We provide leak repairs, blocked drains, geyser installations, and emergency plumbing. Clean, reliable, and efficient service guaranteed.</p>
   </div>
   <div class="cta-buttons">
     <a href="tel:+27XXXXXXXXX">📞 Call Now</a>
@@ -226,19 +218,19 @@ footer {
 <section class="services-section">
   <div class="service-card">
     <h3>Leak Repairs</h3>
-    <p>Quick and efficient repairs of leaking taps, pipes, and toilets.</p>
+    <p>Fast and efficient repairs for leaking taps, pipes, and toilets.</p>
   </div>
   <div class="service-card">
     <h3>Blocked Drains</h3>
-    <p>Clearing sinks, showers, and sewer lines safely and quickly.</p>
+    <p>Clearing blocked sinks, showers, and sewer lines safely.</p>
   </div>
   <div class="service-card">
     <h3>Geyser Repairs</h3>
-    <p>Installation and repair of geysers for reliable hot water.</p>
+    <p>Installation and maintenance for reliable hot water supply.</p>
   </div>
   <div class="service-card">
     <h3>Emergency Plumbing</h3>
-    <p>Fast response for urgent plumbing problems anytime.</p>
+    <p>Quick response for urgent plumbing issues anytime.</p>
   </div>
 </section>
 
